@@ -70,4 +70,4 @@ func3();
 
 console.log(`hello ${16}`); // hello 16
 console.log(`hello ${'name'}`); // hello name
-console.log(`hello ${name}`); // hello Jasurbek
+console.log(`hello ${name}`); // hello Jasurbek        alert("hngbfvds")
