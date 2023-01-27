@@ -63,4 +63,6 @@ myFunc();
 
 // alert("HI!") -> Ogohlantirish
 // prompt("Name:") -> userdan ma'lumot olish!
-// comfirm("18+") -> true false        alert("hngbfvds")
+// comfirm("18+") -> true false      
+
+console.log("test");

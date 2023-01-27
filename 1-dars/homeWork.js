@@ -103,4 +103,5 @@ Funsiya kodlarni qayta qayta yozilishni oldini oladi!
 
 console.log(`hello ${16}`); // hello 16
 console.log(`hello ${'name'}`); // hello name
-console.log(`hello ${name}`); // hello Jasurbek        alert("hngbfvds")
+console.log(`hello ${name}`); // hello Jasurbek     
+console.log("homework");
