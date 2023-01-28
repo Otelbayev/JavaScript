@@ -82,7 +82,7 @@ console.log(true == "0"); //false*/
 // console.log("stur1" > "str2");//true
 // console.log("21" > "199"); //true
 
-// a = 1 , b = "1";
+// a = 1 , b = "1"; 
 
 // console.log(a == b); //true
 // console.log(a === b); //false
@@ -90,7 +90,7 @@ console.log(true == "0"); //false*/
 // console.log(a != b); //false
 // console.log(a !== b); //true
 
-//! Logical opiration
+//! Logical opiration 
 
 let a = true;
 let b = true;
@@ -114,3 +114,7 @@ let c = false;
 
 //! NOT !
  // Inkor Hamma narsanng aksi
+ // !==
+ // !=
+ // !<=
+ // !>=
