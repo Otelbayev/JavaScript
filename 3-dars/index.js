@@ -32,7 +32,7 @@ else{
 // else if(temp === "yomg'ir"){
 //     console.log("Havo Yomg'ir");
 // }
-// else{
+//  {
 //     console.log("Malumot mavjud emas!");
 // }
 
