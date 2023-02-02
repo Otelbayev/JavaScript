@@ -91,5 +91,27 @@ pow(3,3)
 pow(1,100)
 
 
+//! Prime Number
+
+let count = 0;
+for (var m = -5; m <= 100; m++) {
+    function primeNumber(number){
+        let check = true;
+        if (number > 1) {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check) {
+                console.log(`${number}`);
+                count++;
+            }
+        }  
+    }
+    primeNumber(m);
+}
+console.log(`[0 - ${m}] orasida ${count} ta tub son mavjud`);
 
 
