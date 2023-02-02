@@ -1,5 +1,5 @@
 //!1
-/*
+
 let browser = "Safari";
 
 switch(browser) {
@@ -61,6 +61,35 @@ while(i++ < 5) {
 // nol tekshirilganda consoleda bir chiqadi
 // bir tekshirilganda consoleda ikki chiqadi
 // va hokaza
-*/
 
 //!6
+for(let i = 0; i < 3; i++){
+    console.log(`number ${i}`);
+}
+
+ i = 0;
+while(i < 3){
+    console.log(`number ${i}`);
+    i++
+}
+
+//!7
+
+function min(a , b) {
+    if(a >= b) console.log(b);
+    else console.log(a);
+}
+min(-3,-1)
+min(3,5)
+min(8,8)
+
+function pow(a , b){
+    console.log(a ** b);
+}
+pow(3,2)
+pow(3,3)
+pow(1,100)
+
+
+
+
