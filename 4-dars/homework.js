@@ -115,3 +115,248 @@ for (var m = -5; m <= 100; m++) {
 console.log(`[0 - ${m}] orasida ${count} ta tub son mavjud`);
 
 
+for(let m = 0; m < 100; m++){
+    let count = 0 ;
+    function primeNumber(number){
+        for(let i = 1; i <= number; i++){
+            if(number % i == 0) count++;
+        }
+        if(count === 2) console.log(number);
+    }
+    primeNumber(m)
+}
+
+// function numberToword(a){
+//     a += "";
+//     let first ,second , thrid;
+//     let bir = a.charAt(0);
+//     let ikki = a.charAt(1);
+//     let uch = a.charAt(2);
+    
+//     switch (bir) {
+//         case "1":
+//             first = 'Bir yuz'
+//         break;
+//         case 2:
+//             first = 'Ikki yuz'
+//         break;
+//         case 3:
+//             first = 'Uch yuz'
+//         break;
+//         case 4:
+//             first = 'To\'rt yuz'
+//         break;
+//         case 5:
+//             first = 'Besh yuz'
+//         break;
+//         case 6:
+//             first = 'Olti yuz'
+//         break;
+//         case 7:
+//             first = 'Yetti yuz'
+//         break;
+//         case 8:
+//             first = 'Sakkiz yuz'
+//         break;
+//         case 9:
+//             first = 'Toqqiz yuz'
+//         break;
+    
+//         default:
+//             first = "none"
+//         break;
+//     }
+    
+//     switch (ikki) {
+//         case 1:
+//             second = 'o\'n'
+//         break;
+//         case 2:
+//             second = 'yigirma'
+//         break;
+//         case 3:
+//             second = 'o\'ttiz'
+//         break;
+//         case 4:
+//             second = 'qiriq'
+//         break;
+//         case 5:
+//             second = 'ellik'
+//         break;
+//         case 6:
+//             second = 'oltmis'
+//         break;
+//         case 7:
+//             second = 'yetmis'
+//         break;
+//         case 8:
+//             second = 'sakson'
+//         break;
+//         case 9:
+//             second = 'toqson'
+//         break;
+    
+//         default:
+//             second = "none"
+//         break;
+//     }
+    
+//     switch (uch) {
+//         case 1:
+//             thrid = 'Bir'
+//         break;
+//         case 2:
+//             thrid = 'Ikki'
+//         break;
+//         case 3:
+//             thrid = 'Uch'
+//         break;
+//         case 4:
+//             thrid = 'To\'rt'
+//         break;
+//         case 5:
+//             thrid = 'Besh'
+//         break;
+//         case 6:
+//             thrid = 'Olti'
+//         break;
+//         case 7:
+//             thrid = 'Yetti'
+//         break;
+//         case 8:
+//             thrid = 'Sakkiz'
+//         break;
+//         case 9:
+//             thrid = 'Toqqiz'
+//         break;
+    
+//         default:
+//             first = "none"
+//         break;
+//     }
+   
+//     setTimeout(() => {
+//          console.log(`${first} ${second} ${thrid}`);
+//     }, 5000);
+// }
+// numberToword(121)
+
+
+
+function none(z){
+    z += "";
+    let a = z.charAt(0);
+    let b = z.charAt(1);
+    let c = z.charAt(2);
+    let first ,second ,thrid;
+    a = Number(a);
+    b = Number(b);
+    c = Number(c);
+    switch (a) {
+        case 1:
+            first = 'Bir yuz'
+        break;
+        case 2:
+            first = 'Ikki yuz'
+        break;
+        case 3:
+            first = 'Uch yuz'
+        break;
+        case 4:
+            first = 'To\'rt yuz'
+        break;
+        case 5:
+            first = 'Besh yuz'
+        break;
+        case 6:
+            first = 'Olti yuz'
+        break;
+        case 7:
+            first = 'Yetti yuz'
+        break;
+        case 8:
+            first = 'Sakkiz yuz'
+        break;
+        case 9:
+            first = 'Toqqiz yuz'
+        break;
+    
+        default:
+            first = "none"
+        break;
+    }
+
+    switch (b) {
+        case 1:
+            second = 'o\'n'
+        break;
+        case 2:
+            second = 'yigirma'
+        break;
+        case 3:
+            second = 'o\'ttiz'
+        break;
+        case 4:
+            second = 'qiriq'
+        break;
+        case 5:
+            second = 'ellik'
+        break;
+        case 6:
+            second = 'oltmis'
+        break;
+        case 7:
+            second = 'yetmis'
+        break;
+        case 8:
+            second = 'sakson'
+        break;
+        case 9:
+            second = 'toqson'
+        break;
+    
+        default:
+            second = "none"
+        break;
+    }
+    
+    switch (c) {
+        case 1:
+            thrid = 'Bir'
+        break;
+        case 2:
+            thrid = 'Ikki'
+        break;
+        case 3:
+            thrid = 'Uch'
+        break;
+        case 4:
+            thrid = 'To\'rt'
+        break;
+        case 5:
+            thrid = 'Besh'
+        break;
+        case 6:
+            thrid = 'Olti'
+        break;
+        case 7:
+            thrid = 'Yetti'
+        break;
+        case 8:
+            thrid = 'Sakkiz'
+        break;
+        case 9:
+            thrid = 'Toqqiz'
+        break;
+    
+        default:
+            first = "none"
+        break;
+    }
+
+    console.log(`${first} ${second} ${thrid}`);
+}
+
+none(333);
+
+
