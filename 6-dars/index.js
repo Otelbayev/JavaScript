@@ -155,7 +155,7 @@ let obj = {
     name:'none',
     age:15,
     child:{
-        name:'bvcx',
+        name:'bvcx', 
         age:52,
         child:{
             name:'gfds',
@@ -224,50 +224,59 @@ object = 'none';
 
 // u.getName()()
 
-//!Constractor
+//! Optional chaining
 
-// function getName(){
-//     this.name = "jasurbek";
-//     // console.log(this);
+// let user = {
+//     name : 'Webbrain',
+//     title:'IT center',
+//     // info :{
+//     //     // age:50 
+//     // }
 // }
-// console.log(new getName().name);
 
-let id = Symbol('id');
+// console.log(user.name);
+// console.log(user.info?.age);
 
-// let obj = {
-//     [id] : 4
-// };
- // key -> uni
-// console.log(obj[id]);
-// console.log(id); // symbol
+//! Sprad opreator
 
-//! Distucture
-/*
-let ob = {
-    name:"webbrain",
-    title:"IT",
+let use = {
+    name : "Jasurbek",
     child:{
-        name:'child'
+        m:"m"
     }
-    
 }
- // objectni ichidan ajratib chiqarib olish 
-const {name , title , child} = ob
-
-console.log(name);
-console.log(child.name);*/
-
-//! Spread operator
-
-let obj = {
-    name:"webbrain",
-    title:"IT",
-    child:{
-        name:'child'
-    }
-    
+let ues1 = {
+    none : "none"
 }
 
-// console.log(obj);
-obj = {...obj.child}
-console.log(obj);
+let users = {...use , ...ues1}
+
+// console.log(users);
+
+//! Distructure
+
+let name = "none"
+
+let user = {
+    name:'Jasurbek',
+    age: 18,
+}
+
+console.log(user.name);
+
+const {name:newName , age} = user;
+
+console.log(newName); // jasurbek
+console.log(age); // 18
+
+let disObj = {
+    none : 'jasurbek',
+    inObj : {
+        ages: 18,
+    }
+}
+
+const {none , inObj:{ages} } = disObj;
+
+console.log(none);
+console.log(ages);

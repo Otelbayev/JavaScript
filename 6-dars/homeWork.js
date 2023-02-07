@@ -78,3 +78,34 @@ let calculator = {
 // calculator.mul();
 
 
+//!6
+
+let ladder = {
+    step:0,
+    up(){
+        this.step++;
+    },
+    down(){
+        this.step--;
+    },
+    showStep: function (){
+        console.log(this.step);
+    }
+}
+
+// ladder.up().up().down().showStep().down().showStep(); 
+
+//!7
+
+function A() {
+    
+}
+function B() {
+    
+}
+
+let a = new A();
+let b = new B();
+
+console.log(a);
+
