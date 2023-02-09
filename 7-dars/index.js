@@ -15,21 +15,21 @@
 // kasir qismida nechta so0n qolishi Numberni Stringga convert qladi
 // console.log(0.2 + 0.1); // != 0.3
 
-// console.log(Number(0.2 + 0.1).toFixed(1));
+// console.log((5-9).toFixed(5));
 
 //! String to Number
-// let a = "10.3 + 0.2";
-
+let a = "10.3 + 0.2";
+// console.log(parseFloat(a));
 // console.log(Number(a)); // NaN
-// console.log(Number.parseFloat(a)); //10.5
-// console.log(Number.parseInt(a)); //10.5
+// console.log(Number.parseFloat(a)); //10.3
+// console.log(Number.parseInt(a)); //10
 // console.log(eval(a)); // 10.5
 
 // console.log(+'1_000' + 1); // NaN
 
 //! decimal and Binary
 
-// let num = 5
+let num = 5
 // console.log(num.toString(2)); //101
 // console.log(parseInt("101" , 2));
 
@@ -47,7 +47,7 @@
 
 //! toPrecision(n)
 
-// let num = 5.123456
+//  num = 0.123456
 // let n = 2
 // console.log(num.toPrecision(n)); //->n ta raqam chiqaradi  5.1
 
@@ -75,7 +75,7 @@ console.log(Math.floor(-5.6)); //-6
 
 //trunc
 console.log(Math.trunc(1.87456123)); // kasir qismini ochirish butun qismini qaytaradi
-console.log(Math.trunc(-10.999)); // -11
+console.log(Math.trunc(-10.999)); // -10
 
 //random
 console.log(Math.round(Math.random()*100));
