@@ -27,37 +27,42 @@ let round = (a) => {
 // ceil
 
 let ceil = (a) => {
-    console.log(a - ((a*10)%10)/10);
+    if(a >= 0) console.log(a + (10-(a*10)%10)/10);
+    else{
+        a*=(-1)
+        console.log(-1*(a-((a*10)%10)/10));
+    }
 }
 
-// ceil(5.1)
-// ceil(5.2)
-// ceil(5.3)
-// ceil(5.4)
-// ceil(5.5)
-// ceil(5.6)
-// ceil(5.7)
-// ceil(5.8)
-// ceil(5.9)
-
+ceil(5.1)
+ceil(5.2)
+ceil(5.3)
+ceil(5.4)
+ceil(5.5)
+ceil(5.6)
+ceil(5.7)
+ceil(5.8)
+ceil(5.9)
+console.log(Math.ceil(5.5));
 // floor
 
 let floor = (a) => {
-   if(a > 0)console.log(a + (10 - (a*10)%10)/10)
+   if(a > 0)console.log(a - ((a*10)%10)/10)
    else{
     a*=(-1);
     console.log(-1*(a + (10 - (a*10)%10)/10))
    }
 }
-// floor(5.1)
-// floor(5.2)
-// floor(5.3)
-// floor(5.4)
-// floor(5.5)
-// floor(5.6)
-// floor(5.7)
-// floor(5.8)
-// floor(5.9)
+// floor(-5.1)
+// floor(-5.2)
+// floor(-5.3)
+// floor(-5.4)
+// floor(-5.5)
+// floor(-5.6)
+// floor(-5.7)
+// floor(-5.8)
+// floor(-5.9)
+// console.log(Math.floor(-5.5));
 // trunc
 
 let trunc = (a) => {
@@ -118,4 +123,4 @@ let randomIntiger = (min , max) => {
         console.log(random - 50);
     }
 }
-randomIntiger(1 , 50)
+// randomIntiger(1 , 50)
