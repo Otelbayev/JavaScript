@@ -17,12 +17,24 @@ let check = (str1 , str2) => {
 // check('jasurbek' , 'bek')
 
 //! 2
+
 let getCount = (str) => {
-    for(let i = 0; i < str.length; i++){
-     console.log(str[i]);   
+    let obj = {} , n = 0 , m = 1;
+    for (let i = 0; i < str.length; i++) {
+        for(let j = 1 ; j < i; j++){
+            if(str[i] === str[j]){
+                n++;
+            }
+            else {
+               obj
+            }
+            
+        }
     }
+    console.log(n , m);
 }
-// getCount('jasurbek')
+
+// getCount('Jasurbeka')
 
 //!3
 
@@ -46,19 +58,32 @@ let getCurrency = (str) => {
 
 //! 5
 
-let func = (str) => {
-    let obj = {}, n = 0;
+let func1 = (str) => {
+    let obj = {}, n = 0 , m = 0 , k = 0;
+    let char = '!@#$%^&*())_+/*][\'\'-+""|><?~:;'
     for (let i = 0; i < str.length; i++) {
-        if(Number(str[i])) {
-            n++;
-        }
-        else if(1){
-            console.log(str[i]);
-        }
+        if(Number(str[i]) || str[i] == 0) n++;
+        else if(char.includes(str[i]))m++;
+        else k++;
     }
+    obj.letter = k;
+    obj.char = m;
     obj.numbers = n;
     console.log(obj);
 }
-func("web6543$%^&")
+func1("webbr@!n_2023")
 
-console.log();
+let func2 = (str) => {
+    let obj = {} , n = 0, c = 0 , s = 0;
+    for(let i = 0; i < str.length; i++){
+        if(Number(str[i]) || str[i] == 0) n++;
+        else if(str[i].toUpperCase() == str[i].toLowerCase()) c++;
+        else s++;
+    }
+        obj.letter = s;
+        obj.char = c;
+        obj.numbers = n;
+        console.log(obj);
+}
+
+func2("webbr@!n_2023")
