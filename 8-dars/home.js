@@ -19,22 +19,19 @@ let check = (str1 , str2) => {
 //! 2
 
 let getCount = (str) => {
-    let obj = {} , n = 0 , m = 1;
+    let obj = {} , n = 1 ;
     for (let i = 0; i < str.length; i++) {
-        for(let j = 1 ; j < i; j++){
-            if(str[i] === str[j]){
-                n++;
+        for (let j = 0; j < i; j++) {
+            if(str[i] == str[j]){
+                obj[str[i]] = n
+                n++
             }
-            else {
-               obj
-            }
-            
+            else obj[str[i]] = 1
         }
-    }
-    console.log(n , m);
-}
-
-// getCount('Jasurbeka')
+    } 
+    console.log(obj);
+} 
+getCount('webbrain')
 
 //!3
 
@@ -57,7 +54,7 @@ let getCurrency = (str) => {
 // getCurrency("%^&*$4%^&*1200$%^&");
 
 //! 5
-
+//! first way
 let func1 = (str) => {
     let obj = {}, n = 0 , m = 0 , k = 0;
     let char = '!@#$%^&*())_+/*][\'\'-+""|><?~:;'
@@ -71,8 +68,9 @@ let func1 = (str) => {
     obj.numbers = n;
     console.log(obj);
 }
-func1("webbr@!n_2023")
+// func1("webbr@!n_2023")
 
+//! second way
 let func2 = (str) => {
     let obj = {} , n = 0, c = 0 , s = 0;
     for(let i = 0; i < str.length; i++){
@@ -86,4 +84,4 @@ let func2 = (str) => {
         console.log(obj);
 }
 
-func2("webbr@!n_2023")
+// func2("webbr@!n_2023")
