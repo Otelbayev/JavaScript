@@ -18,20 +18,24 @@ let check = (str1 , str2) => {
 
 //! 2
 
-let getCount = (str) => {
-    let obj = {} , n = 1 ;
-    for (let i = 0; i < str.length; i++) {
-        for (let j = 0; j < i; j++) {
-            if(str[i] == str[j]){
-                obj[str[i]] = n
-                n++
-            }
-            else obj[str[i]] = 1
-        }
-    } 
+// let str = 'webbrain';
+// let newStr = str.toLowerCase();
+// let obj = {};
+// for(value of newStr){
+//   if(value in obj)obj[value]++;
+//   else obj[value]=1;
+// }
+// console.log(obj)
+
+let getCoutn = (str) => {
+    let obj = {};
+    for(i of str.toLowerCase()){
+        if(i in obj) obj[i]++
+        else obj[i] = 1
+    }
     console.log(obj);
-} 
-getCount('webbrain')
+}
+getCoutn('webbrain')
 
 //!3
 
