@@ -121,36 +121,44 @@ while(person){
 
 //! No7
 // array berilgan array ning ichida objectlar berilgan. object ichida age berilgan. age ni 18dan katta bolgan objectlarni qaytaring
-// let user7 = {
-//     id: 1,
-//     name: 'Odil',
-//     age: 78,
-//     children: [
-//         {
-//             id: 1,
-//             name: 'Umar',
-//             age: 54,
-//             children: [
-//                 { id: 1, name: 'Asmo', age: 34 },
-//                 { id: 2, name: 'Osim', age: 30 },
-//                 { id: 3, name: 'Xattob', age: 25 },
-//             ]
-//         },
-//         { id: 2, name: 'Umar', age: 54 },
-//         { id: 3, name: 'Umar', age: 54 },
-//     ]
-// }
+let user7 = {
+    id: 1,
+    name: 'Odil',
+    age: 78,
+    children: [
+        {
+            id: 1,
+            name: 'Umar',
+            age: 54,
+            children: [
+                { id: 1, name: 'Asmo', age: 34 },
+                { id: 2, name: 'Osim', age: 30 },
+                { id: 3, name: 'Xattob', age: 25 },
+            ]
+        },
+        { id: 2, name: 'Umar', age: 54 },
+        { id: 3, name: 'Umar', age: 54 },
+    ]
+}
 
 
-// ! No8
+
+// No8
 // array ichida object berilgan. job berilgan objectlarni qaytaring
-// let arr=[
-//     {id:1,name:'Usmon',job:'developer'},
-//     {id:2,name:'Usmon',job:'developer'},
-//     {id:3,name:'Usmon'},
-//     {id:4,name:'Usmon',job:'developer'},
-//     {id:5,name:'Usmon'}
-// ]
+let arr=[
+    {id:1,name:'Usmon',job:'developer'},
+    {id:2,name:'Usmon',job:'developer'},
+    {id:3,name:'Usmon'},
+    {id:4,name:'Usmon',job:'developer'},
+    {id:5,name:'Usmon'}
+]
+
+for(const i of arr){
+    if('job' in i){
+        // console.log(i);
+    }
+}
+
 // No9
 // objectdan clone oling birinchi objni o'zgartirsa ikkinchisi malumotlari ozgarmasligi kk
 let obj9={
