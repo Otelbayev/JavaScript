@@ -141,6 +141,9 @@ let user7 = {
     ]
 }
 
+let funk = (obj) => {
+     
+} 
 
 
 // No8
