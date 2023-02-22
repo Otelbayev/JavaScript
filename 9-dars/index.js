@@ -125,7 +125,7 @@ array.splice(2 , 0 , "hello") //! 2-indexga 'hello' ni qoshadi hech narsa ochirm
 
 // console.log(array);
 
-//! Slice()
+//! Slice() 
 
 let ar1 = [1 , 2 , 3 , 4 , 5]
 let ar2 = [1 , 2 , 3 , 4 , 5]
@@ -163,125 +163,117 @@ ar1 = [1 , 2 , 3 , 4 , 5];
 // boolean qiymat qaytaradi array ichida bor yoki yoqligiga tekshiradi
 // console.log(ar1.includes(0)); // flase
 
-//! .filter()
 
-let num = [1,2,3,4,5,6,7,8,9];
-let str = [ 'apple' , 'orange' , 'banane' , 'kiwi'];
+//! filter 
+// shart tekshiradi true return true bolsa shu ma'lumotni qildiradi false bolsa shu malumotni remove qilib yuboradi!
+let number = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 20 , 15]
+let string = ['jasur' , 'inam' , 'davron' , 'none']
 
-let res = num.filter((value , index) => {
-    // return true;  //!numdagi hamma element chiqadi 1 , 2 ...
-    // return flase; //!bosh array 0 , "" , []
-    return value > 5 // [6,7,8,9]
+let res = number.filter((value , index , array) => {
+    if(!(value % 2)) return true;
+    else return false;
 })
-
-res = str.filter((value , index) => {
-    return value.length <= 5 //['apple' , 'kiwi']
+res = string.filter((value) => {
+    return value.length > 5;
 })
-
 
 let students = [
-    {id:1 , year:1999 , name:'jasurbek'},
-    {id:2 , year:1998 , name:'none'},
-    {id:3 , year:1997 , name:'inam'},
-    {id:4 , year:1996 , name:'davron'},
-    {id:5 , year:1995 , name:'john'},
-    {id:6 , year:1994 , name:'sara'},
-    {id:7 , year:1993 , name:'july'},
-    {id:8 , year:1992 , name:'natale'},
+    {name:'jasurbek' , sname:'Otebayev' , age:18},
+    {name:'none' , sname:'sojfbn' , age:15},
+    {name:'inam' , sname:'Otebayev' , age:11},
+    {name:'davron' , sname:'kamalov' , age:30},
+    {name:'orbn' , sname:'ERB' , age:10},
+    {name:'uPEFr' , sname:'YRNTBE' , age:8},
+    {name:'none' , sname:'sojfbn' , age:15},
 ]
 
-res = students.filter((value)=> value.year === 1998 )
-res = students.filter(value => value.id > 5 )
+res = students.filter((e)=>e.age >= 18)
 
-num = [95,986,956,-9,4,-6,74,-54,0]
+//! sort();
+//sortirovka qiladi 
+res = number.sort(); // notogri chiqaradi
+res = number.sort((a , b) => a - b) // osish tartibida
+res = number.sort((a , b) => b - a) // kamayish tartyibida
 
-//! .sort();
+res = string.sort((a , b) => a.localeCompare(b))// a-z ga
+res = string.sort((a , b) => b.localeCompare(a))// z-a ga
 
-res = num.sort((a , b)=>a - b) //! osish tartibida
-res = num.sort((a , b)=>b - a) //! kamayish tartibida
+//! find();
+// return qilgan narsani qitadi topgan paytda toxtaydi filter esa oxirigacha ishlaydi!
+number = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9]
+res = number.find((value) => {
+    // console.log(value);
+    return value == 3
+})
 
-res =  str.sort((a , b) => a.localeCompare(b)) //! stringga nisbatan taqqoslash
+// console.log(res); 
+//! findIndex(); findLastIndex();
 
-res = students.sort((a , b) => a.year - b.year) //! osish tartibida yerlar
-res = students.sort((a , b) => b.year - a.year) //! kamayish tartibida yerlar
+res = students.findIndex((e) => e.age == 18)
+// console.log(res); //! indexini chiaradi
 
-res = students.sort((a , b) => a.name.localeCompare(b.name)) //! alifbo tartibida ciqaradi
+res = students.findLastIndex((e) => e.name === 'none')
 
-// console.log(res);
+//! every();
+//arrayning elementi hamma shartni qanotlantirgandagina true qaytaradi boshqa paytda false
+res = number.every((e) => e > 0)
 
-//! .find();
+//! some();
+//array elementidan birontasi shartna qanotlantiesa true hech bir qanotlantrmagan taqdirda false qaytaradi!
+res = number.some((e) => e > 5)
 
-num = [1,2,3,4,5,6,7,8,9];
-str = [ 'apple' , 'orange' , 'banane' , 'kiwi'];
-students = [
-    {id:1 , year:1999 , name:'jasurbek'},
-    {id:2 , year:1998 , name:'none'},
-    {id:3 , year:1997 , name:'inam'},
-    {id:4 , year:1996 , name:'davron'},
-    {id:5 , year:1995 , name:'john'},
-    {id:5 , year:1995 , name:'johns'},
-    {id:6 , year:1994 , name:'sara'},
-    {id:7 , year:1993 , name:'july'},
-    {id:8 , year:1992 , name:'natale'},
-]
-
-res = num.find(value => value == 8) // 8
-res = str.find(value => value.length == 5) // 'apple'
-res = students.find(value => value.id == 5) // id=5 bolgan value ni chiqaradi
-
-
-//! .findIndex();
-
-res = students.findIndex(value => value.id == 5) // id=5 bolgan valuening indexini chiqaradi!
-
-//! .findLasiIndex();
-
-res = students.findLastIndex(value => value.id == 5) // oxiridan boshlab qidiradi
-
-// console.log(res);
+//! Array.from();
+//stringni arrayga aylantiradi
+res = Array.from('12345678' , (e) => Number(e))
+// console.log(res); 
 
 //! forEach();
-//qandaydir amal bajarish uchun 
-// let resfor = num.forEach((value , index) => console.log(value))
+  //malumot qaytarmaydi faqat arrayni yurib chiqadi
+number = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9];
 
-//! .map();
-// malumot ekranga chiqishi kerak bolsa map ishlatiladi array qaytaradi
-let resmap = num.map((value , index) => {
+res = number.forEach((value,index) => {
+    // console.log(value);
+})
+
+// console.log(res);
+
+//! map();
+// malumot qaytadi yani return qiladi array qaytaradi , ekranga chiqarishda map ishlatiladi!
+res = number.map((value,index) => {
+    // console.log(value);
     return value
 })
 
-//! .every();
-num = [1,2,'3',4,5,6,7,8,9]
-// console.log(num.every((value) => !isNaN(value))); //! true
+//! fill();
 
-// console.log(num.every((value) => typeof value == 'string')); //! hammasii tekshiradi barcha vasluedan true qaytsa true bittsi flase bolsa false
+num = [10 , 15 , 10 , 20];
 
-// boolean qiymat qaytaradi array ichidagi elementlarni tekshiradi
+res = num.fill(3 , 1 , 3) // 3 ni 1-3 indexlardagi elementlar o'rniga qoyadi
 
-//! .some();
+//! copWithin()
 
-// console.log(num.some((value)=> typeof value == "number"));
+num = [0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9];
+//! console.log(eval(num.join("+")));
+res = num.copyWithin(0 , 5 , 9);
 
-//! everyga teskari ishlaydi bitta true chiqsa hammasi true bitta ..
+//! flat();
 
-//! .fill();
-num = [1,2,'3',4,5,6,7,8,9]
-// console.log(num.fill('wba' , 2)); // 2-indexdan boshlab hammasi 'wba' ga ozgaradi
+let c = [1 , [2 , [0 , [1 , 5 , [10]]]]];
 
-// console.log(num.fill('jasur', 2 , 5)); // 2-indexdan boshlab 5-indexgach 'jasur' ga ozgaradi
+res = c.flat(Infinity)
 
-//! .copyWidthin();
+//! flatMap();
+// flat + map ni umumlashganu
+res = c.flatMap((value) => {
+    return value;
+})
 
-
-// console.log(a.copyWithin(0 , 3 , 6)); // 0 indexdan boshlab  [3-6) index orasidagi ma.lumotlarni qoyadi
-
-let a = [1 , 2 , 3 , 4 , 5 , 6 , 7];
 
 //! .reduce();
+let mm = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9];
+let result = mm.reduce((current , value) => {
+    // console.log(current , value);
+    return current + value
+} , 5)
 
-res = a.reduce((sum , current) => {
-//    console.log(sum);
-    return 1;
-} , 0)
-
-console.log(res);
+console.log(result);
