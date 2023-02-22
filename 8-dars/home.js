@@ -24,7 +24,7 @@ let check = (str1 , str2) => {
 // for(value of newStr){
 //   if(value in obj)obj[value]++;
 //   else obj[value]=1;
-// }
+// } 
 // console.log(obj)
 
 let getCoutn = (str) => {
