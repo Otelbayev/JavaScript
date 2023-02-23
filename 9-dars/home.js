@@ -1,15 +1,27 @@
 //! 1
 
-let count = (array) => {
-    let str = array.join("").toLowerCase() , obj = {};
-    for(const i of str){
-        if(i in obj) obj[i]++;
-        else obj[i] = 1
-    }
-    console.log(obj);
+let sum = (array) => {
+    let s = 0
+    array.forEach(e => {
+        if(Number(e)) s += e
+    });
+    console.log(s);
 }
-count(['webbrain' , 'academy'])
+// sum([1 , 2 , 3 , 4 , 5 , 8 , "jasur" , 6 , 7 , 9]);
 
-let arr2 = [0 , 1 , 2]
-arr2[3] = 3
-console.log(arr2);
+//! 2
+let countChar = (array) => {
+    let count = 0;
+    array.forEach(e => {
+        if(typeof e === 'string'){
+            for(let i = 0; i < e.length; i++){
+                if(e[i].toLowerCase() == e[i].toUpperCase() && e[i] !== " ")count++;
+            }
+        }
+    })
+    console.log(`Array elementlari ichida umumiy ${count} ta char mavjud`);
+}
+
+// countChar(['webbrain' , 'academy' , '#$%^&*' , 'jasur%^&'])
+
+//!3
