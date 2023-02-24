@@ -57,3 +57,29 @@ let camelize = (str) => {
 // camelize('background-color');
 // camelize('list-stye-image');
 // camelize('-webkit-transition');
+
+//!5
+let user = [
+    { id:1, year: 1998, engine: 1, name: 'Tiko' },
+    { id:2, year: 2005, engine: 1.2, name: 'Matiz' },
+    { id:3, year: 2010, engine: 1.6, name: 'Gentra' },
+    { id:4, year: 2010, engine: 1.5, name: 'Cobalt' },
+    { id:5, year: 2012, engine: 2, name: 'Malibu' },
+    { id:6, year: 2000, engine: 1.2, name: 'Damas' },
+    { id:7, year: 2018, engine: 2.4, name: 'Tracker' }
+];
+//!2000 yildan oldingi
+let res = user.filter((e) => e.year < 2000)
+// console.log(res);
+//!2010 yildan keyingi
+res = user.filter((e) =>  e.year > 2010)
+// console.log(res);
+//!engine kuchiga qarab sort
+res = user.sort((a , b) => a.engine - b.engine)
+// console.log(res);
+//!yiliga qarab sort
+res = user.sort((a , b) => a.year - b.year)
+// console.log(res);
+//!Alphabet tartibida sort
+res = user.sort((a , b) => a.name.localeCompare(b.name))
+console.log(res);
