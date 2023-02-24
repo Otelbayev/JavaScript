@@ -82,4 +82,50 @@ res = user.sort((a , b) => a.year - b.year)
 // console.log(res);
 //!Alphabet tartibida sort
 res = user.sort((a , b) => a.name.localeCompare(b.name))
-console.log(res);
+// console.log(res);
+//! 2010-2020 oraligidagi
+res = user.filter(e => {
+    return e.year > 2010 && e.year < 2020
+}) 
+// console.log(res);
+
+let webbrain = {
+    frontend: [
+        { course: 'react', price: 120 },
+        { course: 'vue', price: 110 },
+        { course: 'angular', price: 100 },
+    ],
+    backend: [
+        { course: 'java', price: 120 },
+        { course: 'php', price: 110 },
+        { course: 'node,js', price: 100 },
+    ],
+    mobile: {
+        android: [
+            { course: 'android', price: 120 },
+            { course: 'flutter', price: 110 }
+        ],
+        ios: [
+            { course: 'ios', price: 120 },
+            { course: 'flutter', price: 110 }
+        ]
+    },
+}
+
+let sum1 = 0;
+for (const key in webbrain) {
+    let a = webbrain[key];
+    if(Array.isArray(a)){
+        a.forEach((e) => {
+          sum1 += e.price;
+        })
+    }
+    else{
+        for (const i in a) {
+            a[i].forEach((e) => {
+            sum1 += e.price;
+            })
+        }
+    }
+}
+console.log(sum1);
