@@ -2,7 +2,7 @@
 // create read update delate
 
 //! Read!
-
+//filter() sort() includes() find()
 
 let students = [
     {id:1, year: 2004, name: 'Jasurbek'},
@@ -33,9 +33,16 @@ let sortById = (students) => {
     console.log(res);
 }
 
+let prompt = (x) => {
+    let res = students.filter((value) => value.name.toLocaleLowerCase().includes(x))
+    console.log(res);
+}
+prompt('s')
+
 // sortById(students)
 
 //! Delate
+//filter() splice()
 
 let delateUser = (user) => {
     let res = user.filter((value) => value.id !== 1)
@@ -44,10 +51,39 @@ let delateUser = (user) => {
 // delateUser(students)
 
 //!Create
+//use separate(...) distucture
 
 let addUser = (user) => {
     students = [...students , {...user}]
-    console.log(students);
+    // console.log(students);
 }
 
 // addUser({id:students.length + 1, year:2019 , name:'webbrain'})
+
+//!Update
+//filter() map() find();
+
+let updateUser = (data) => {
+    let res = students.map((value) => {
+        if(value.id == data.id) {
+            return { ...value , [data.type] : data.value}
+        }
+        else {
+            return value;
+        }
+    })
+    console.log(res);
+}
+
+// updateUser({id:2 , type:'year' , value:'gulbashakar' })
+
+// let obj = {
+//     name:'jasurbek',
+//     child: {
+//         name:'inamjon',
+//         age :17
+//     }
+// }
+
+// const {age} = obj.child
+// console.log(age);
