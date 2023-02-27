@@ -215,9 +215,17 @@ for(let i of array) {
 // [1 , 2]
 // [1]
 
+array = [1,2,3,4,5];
 
-
-
-
+while(array.length > 1){
+    array = array.sort((a , b) => b - a)
+    if(!(array[0] - array[1])){
+        array.splice(0 , 2);
+        array.push(res[0] - res[1])
+    } else {
+        array.splice(0 , 2);
+    }
+    console.log(array);
+}
 
 
