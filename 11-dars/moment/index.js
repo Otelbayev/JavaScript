@@ -23,7 +23,6 @@ const months = [
     'November',
     'December',
 ]
-
 let x = date.getDate();
 x = x.toString()
 let y , z;
@@ -138,14 +137,33 @@ let moment = (p) => {
             spans.appendChild(LL)
             break;
         case 'll' :
+            const ll = document.createElement('div')
+            ll.innerHTML = `// ${months[date.getMonth()].slice(0 ,3)} ${date.getDate(``)}, ${date.getFullYear()}`
+            spans.appendChild(ll)
             break;
         case 'LLL' :
+            const LLL = document.createElement('div');
+            m.toString().length === 1 ? m = `0${m}` : m = m
+            LLL.innerHTML = `// ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} ${h}:${m} ${b}`
+            spans.appendChild(LLL)
             break;
         case 'lll' :
+            const lll = document.createElement('div');
+            m.toString().length === 1 ? m = `0${m}` : m = m
+            lll.innerHTML = `// ${months[date.getMonth()].slice(0 , 3)} ${date.getDate()}, ${date.getFullYear()} ${h}:${m} ${b}`
+            spans.appendChild(lll)
             break;
         case 'LLLL' :
+            const LLLL = document.createElement('div');
+            m.toString().length === 1 ? m = `0${m}` : m = m
+            LLLL.innerHTML = `// ${week[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} ${h}:${m} ${b}`
+            spans.appendChild(LLLL)
             break;
         case 'llll' :
+            const llll = document.createElement('div');
+            m.toString().length === 1 ? m = `0${m}` : m = m
+            llll.innerHTML = `// ${week[date.getDay()].slice(0 , 3)} ${months[date.getMonth()].slice(0 , 3)} ${date.getDate()}, ${date.getFullYear()} ${h}:${m} ${b}`
+            spans.appendChild(llll)
             break;
         default:
             alert('Error 404')

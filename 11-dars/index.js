@@ -53,6 +53,7 @@ Object.entries(obj).map(([value]) => {
 //! new Date()
 
 let date = new Date();
+
 // console.log(Date.now()); //! 1970-yildan boshlab hozirgacha bolgan sekund
 // console.log(date.getDay()); //! kunni hisoblatdi Sun = 0 , Mon = 1 Thuse = 2 ..
 // console.log(date.getDate()); //! sanani chiqaradi
