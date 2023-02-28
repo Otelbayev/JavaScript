@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+body{
+    background: #252134;
+}
+.img img{
+    width: 180px;
+    height: 180px;
+}
+.img{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.title{
+    margin: 10px 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 1px 1px 5px #fff;
+}
+.wrapper{
+    width: 100%;
+    background:rgb(253, 253, 253);
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+.mintitle{
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: 'Inconsolata', monospace;
+    padding: 20px 0;
+}
+.box{
+    width: 70%;
+    margin: 0 auto;
+    background:rgb(214, 212, 212);
+    padding: 10px;
+    border-radius:5px;
+    border: 1px solid gray;
+}
+.div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.div p , span {
+    font-family: 'Inconsolata',monospace;
+    font-size: 18px;
+}
+.div p {
+    font-weight: 700;
+    width: 60%;
+}
+.box1{
+    display: flex;
+    flex-wrap:wrap;
+}
+.box1 .s {
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+}
+.box1 .p {
+    width: 60%; 
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+}
+.box1 p , div {
+    padding:5px 0;
+}
