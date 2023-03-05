@@ -87,5 +87,6 @@ let user = {
 console.log(JSON.stringify(user, ['name' , 'age'] , 2)); // stringga ogirib backendga jonatish uchun ishlatiladi
 
 let obj1 = JSON.stringify(user);
-console.log(JSON.parse(obj1)); // stringga otkazilgan obj ni orqaga qaytaradi
+console.log(JSON.parse(obj1)); //! stringga otkazilgan obj ni orqaga qaytaradi
 
+console.log(Object.entries(['name','jasurbek']));
