@@ -32,24 +32,54 @@ let Fac = (n) => {
 
 //! Fibonacci
 
-function fibonacci(num){
-  var a = 1, b = 0, c;
+// function fibonacci(num){
+//   let a = 1, b = 0, c;
 
-  while (num >= 0){
-    c = a;
-    a = a + b;
-    b = c;
-    num--;
-  }
-  return b;
-}
+//   while (num >= 0){
+//     c = a;
+//     a = a + b;
+//     b = c;
+//     num--;
+//   }
+//   return b;
+// }
 
-console.log(fibonacci(10));
+// console.log(fibonacci(10));
 
-function fibonacci(num) {
-  if (num <= 1) return 1;
+// function fibonacci(num) {
+//   if(num <= 1) return 1
+//   return fibonacci(num - 1) + fibonacci(num - 2);
+// }
 
-  return fibonacci(num - 1) + fibonacci(num - 2);
-}
+// console.log(fibonacci(10));
 
-console.log(fibonacci(10));
+// let arr = [0 , 1];
+
+// let fibonacci = (n) => {
+//    if(!n){
+//     return arr
+//    } else{
+//     arr.push(arr[arr.length - 1] + arr[arr.length - 2])
+//     return fibonacci(n - 1)
+//    }
+// }
+// let input = 10
+// console.log(fibonacci(input - 2));
+
+// let moment = () => {
+//   return {
+//     format(){
+//       console.log('hello world');
+//     }
+//   }
+// }
+
+// moment().format();
+
+setTimeout(() => {
+    console.log('none');
+}, 5000);
+
+console.log('hello')
+
+console.log('qwer');
