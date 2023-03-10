@@ -10,8 +10,13 @@ function getName() {
 
 function getCached(func) {
     let cache = new Map()
-    return function(){
-        
+    return function(x){
+        if(cache.has(x)){
+            return cache.get(x)
+        } else {
+            let res = func();
+            return cache.set(x , res)
+        }
     }
 }
 
