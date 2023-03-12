@@ -21,7 +21,7 @@ let user1 = {name:'none' ,age:15}
 user2 = {name:'qwere' ,age:19}
 
 Object.prototype.fullName = function() {
-    console.log(this.name , this.age);
+    // console.log(this.name , this.age);
 }
 
 
@@ -36,17 +36,27 @@ Array.prototype.remove = function(n) {
     console.log(res);
 }
 
-ar.remove(1)
+// ar.remove(1)
 
 //! homework
 
 //obj.remove('name')
-//obj.set('name' , 'writable' , false)
 
-let r = {
-    name: 'jasuerbek'
+Object.prototype.remove = function(n) {
+    delete this[n];
+    console.log(this);
 }
 
-Object.defineProperty(r,'name' , {value:'nono'})
-
-console.log(r);
+const person = {
+  name: "John",
+  surName: "Doe",
+  age: 34,
+  developer: true,
+};
+Object.prototype.set = function (descriptor, value, boolean) {
+  return Object.defineProperty(this, value, {
+    [descriptor]: boolean,
+  });
+};
+person.set("enumerable", "age", false);
+console.log(Object.getOwnPropertyDescriptor(person, "age"));
