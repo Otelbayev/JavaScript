@@ -10,3 +10,6 @@ export let users = [
     {id:9, name:'jasurbek' , age:18 },
     {id:10, name:'jasurbek' , age:18 },
 ]
+
+export const list = [1,2,3,4,5,6,7]
+

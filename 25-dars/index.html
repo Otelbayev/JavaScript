@@ -8,11 +8,32 @@
 </head>
 <body>
     <h1>Modules</h1>
-    <script>
-        
-        import {} from './index.js';
-         
+    <script type="module">
+        import { users as newUsers , list} from "./index.js"
 
+        let users = "jasurbek"
+
+        // console.log(users);
+        // console.log(newUsers);
+        // console.log(list);
+
+        // import ment from "./mock.js"
+
+        // ment()
+
+        // import {students} from "./mock.js"
+
+        // students()
+
+        import mentors , { mentors as students , students as none } from "./mock.js"
+
+        // mentors() //!mentor
+        // students()//!mentor
+        // none() //! students
+
+        import "./prototypes.js"
+        mentors()
+        students()
     </script>
 </body>
 </html>
