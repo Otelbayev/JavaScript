@@ -55,9 +55,19 @@
 
 let h1 = document.querySelector('h1')
 
-h1.setAttribute('class' , "jasur")
-h1.setAttribute('id' , "none")
-console.log(h1.getAttribute('class'));
+// h1.setAttribute('class' , "jasur")
+// h1.setAttribute('id' , "none")
+// console.log(h1.getAttribute('class'));
 
-h1.removeAttribute('class')
-h1.removeAttribute('id')
+// h1.removeAttribute('class')
+// h1.removeAttribute('id')
+
+
+function toggle() {
+    button.classList.toggle('red')
+}
+
+h1.style.cssText = `
+    color:blue;
+    background:red;
+`
