@@ -48,8 +48,8 @@ parent.style.cssText = `
 
 //! Scroll
 
-console.log(parent.clientHeight); //parent uzunligi
-console.log(parent.scrollHeight); // umumiy scroll uzunlik
+// console.log(parent.clientHeight); //!parent uzunligi
+// console.log(parent.scrollHeight); //!umumiy scroll uzunlik
 
 function get() {
     if(parent.clientHeight === parent.scrollHeight){
@@ -59,9 +59,9 @@ function get() {
     }
 }
 //! eng oxiriga tushiradi
-// function s(){
-//     parent.scroll(0 , parent.scrollHeight)
-// }
+function s(){
+    parent.scrollTo({top:50 , behavior:"smooth"})
+}
 
 //! 10px dan tusirib boradi
 // function s(){
@@ -75,3 +75,6 @@ function get() {
 
 //! barcha parametrlarini olib keladi
 console.log(parent.getBoundingClientRect());
+
+console.log(parent.clientWidth);
+console.log(parent.offsetWidth);
