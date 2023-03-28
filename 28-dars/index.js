@@ -71,3 +71,8 @@ h1.style.cssText = `
     color:blue;
     background:red;
 `
+
+let li = document.createElement('li')
+li.innerText = 20
+
+ul.append(li)
