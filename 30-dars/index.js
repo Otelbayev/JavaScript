@@ -57,7 +57,7 @@
 //! bosilganda mousedown qoyib yuborilganda moudeup keyin click
 
 // let g = document.getElementById('tort')
-
+ 
 // g.addEventListener('mouseenter' ,() => {
 //     console.log('mousedown');
 // })
@@ -128,3 +128,18 @@ table.onclick = function(event) {
     target = event.target;
     target.classList.toggle('red')
 }
+
+
+
+
+
+let a = document.forms.form1.elements.input1  
+
+console.log(a);
+
+
+
+
+
+
+
