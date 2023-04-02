@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM*-5</title>
+    <title>DOM-5</title>
+    <style>
+        .div{
+            width: 255px;
+            height: 255px;
+            border: 1px solid silver;
+            background: red;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            border:1px solid blue;
+            overflow: auto;
+            font-size: 20px;
+            margin: 50px 0;
+        }
+        .navbar{
+            transition: 0.5s;
+            background:black;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="item">Home</div>
+        <div class="item">About</div>
+        <div class="item">Course</div>
+        <div class="item">News</div>
+    </nav>
     
-    <h1 id="h1">jasuebek</h1>
+    <h1 id="title">jasurbek</h1>
+
+    <h1 id="nm">Name: </h1>
+    <input onkeyup="change(event)" type="text">
+
+    <div class="div"></div>
+
+    <div class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum totam culpa animi amet atque eaque nostrum natus eveniet et, maiores, non suscipit a quidem, recusandae cupiditate obcaecati corrupti cumque adipisci dolorem libero repellat unde aut perferendis assumenda. Laudantium id sed fugit cupiditate deserunt voluptates? Tempore blanditiis quam voluptatum obcaecati. Temporibus, facere consequatur reiciendis itaque dignissimos porro illum! Ad, placeat eligendi tempore iste qui, voluptates est sit saepe odio dolorum, enim architecto error eveniet corrupti in doloremque at culpa officiis laboriosam natus quasi delectus libero sint repellendus! Cupiditate, beatae alias! Nostrum ab voluptate iure alias temporibus dolore magnam consequatur molestias hic!
+    </div>
+
     <script src="./index.js"></script>
 </body>
 </html>
