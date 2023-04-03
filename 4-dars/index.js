@@ -78,3 +78,45 @@ outer: for(i = 10; i >= 1; i--){
       break outer;
     }
 }
+
+let webbrain = {
+    frontend:[
+        {price:1}
+    ],
+    backend:[
+        {price:1}
+    ],
+    mobile:{
+        android:[
+            {price:1}
+        ],
+        ios:[
+            {price:1}
+        ]
+    }
+}
+
+let sum1 = 0
+function none(a){
+    for(let i in a){
+        if(Array.isArray(a[i])){
+            a[i].forEach((e) => sum1 += e.price)
+        } else {
+            none(a[i])
+        }
+    }
+}
+none(webbrain)
+console.log(sum1);
+
+let sum = (a) => {
+    return(b) => {
+        if(b) {
+            return sum(a+b)
+        }
+        return a
+    }
+}
+
+console.log(sum(5)(6)(9)());
+
