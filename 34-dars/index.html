@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .border{
+         border:1px solid red;
+      }
+      .box{
+         width: 200px;
+         height: 200px;
+         padding: 20px;
+         margin: 30px;
+         border:5px solid red;
+         display: grid;
+         place-items: center;
+         overflow: auto;
+      }
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+   </style>
+</head>
+<body>
+   <button onclick="less()">less</button>
+   <button onclick="more()">more</button>
+   <button id="btn" onclick="toggle()">show more</button>
+   <button id="btn2" onclick="scrolTo()">scrol to</button>
+   <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, maxime ab sed ducimus nesciunt expedita sapiente laborum similique, laudantium libero consequatur cupiditate iste veritatis? Iure officiis amet ullam dolores nisi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati quisquam sit corrupti cupiditate! A aut labore quos recusandae dolor vel provident quisquam atque illo illum inventore, iusto dolorem maiores consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, necessitatibus soluta molestias perspiciatis enim, quaerat sapiente quam illum rerum quas est? Modi architecto ad corrupti doloribus nemo facere, veniam ea?
+   </div>
+   <div>
+      <h1 id="title">Jasurbek otelbayev</h1>
+   </div>
+   <script src="./index.js"></script>
+</body>
+</html>
