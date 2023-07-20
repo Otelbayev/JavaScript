@@ -6,10 +6,74 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 </head>
+<style>
+   .grand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 700px;
+      height: 700px;
+      border: 1px solid black;
+   }
+
+   .parent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 500px;
+      height: 500px;
+      border: 1px solid red;
+   }
+
+   .child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 300px;
+      border: 1px solid blue;
+   }
+
+   td {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      font-size: 60px;
+      cursor: pointer;
+   }
+
+   .red {
+      background-color: red;
+      color: #fff;
+   }
+</style>
 
 <body>
    <h1>DOM-4</h1>
-   <button>test Class</button>
+   <div class="grand">
+      <div class="parent">
+         <div class="child">
+         </div>
+      </div>
+   </div>
+   <table border="1">
+      <tr>
+         <td>1</td>
+         <td>2</td>
+         <td>3</td>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>2</td>
+         <td>3</td>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>2</td>
+         <td>3</td>
+      </tr>
+   </table>
+   <button id="button">test Class</button>
    <script src="./index.js"></script>
 </body>
 
