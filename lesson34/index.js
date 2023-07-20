@@ -31,8 +31,6 @@ let txt = document.createTextNode("Jasurbek");
 
 div.setAttribute("class", "border");
 
-div.prepend(txt);
-
 title.after(div);
 
 // !append -> element ichida , boshida
