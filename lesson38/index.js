@@ -20,4 +20,20 @@ console.log(form.select.options[2]);
 //!onblur -> inputdan tashqariga chiqqanda
 //!onfocus -> inputni ichita turgan paytda
 
-error.style.color = "red";
+//!error validation
+let login = document.getElementById("login");
+
+login.onblur = (e) => {
+  if (!e.target.value.includes("@")) {
+    error.innerHTML = "none";
+    error.style.color = "red";
+  }
+};
+
+login.onfocus = (e) => {
+  error.innerHTML = null;
+};
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+};
