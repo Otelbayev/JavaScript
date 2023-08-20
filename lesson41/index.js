@@ -28,5 +28,3 @@ txt.innerHTML = "jasurbek";
 // window.onbeforeunload = () => {
 //   return true;
 // };
-
-//!Mutation observer => node in ozgarishini kutadi
