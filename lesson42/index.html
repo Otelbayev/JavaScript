@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #victom {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+      }
+      button {
+        position: absolute;
+        top: 200px;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>clickjank attack</h1>
+    <div onclick="getData(event)" id="victom">victom</div>
+    <button>get money</button>
+    <script src="./index.js"></script>
+  </body>
+</html>
