@@ -27,10 +27,29 @@ async function onSelect(id) {
       Authorization: `Bearer`,
     },
     body: JSON.stringify({
-      login: "jasubrek",
-      password: 1604,
+      email: "jasurdev1604@gmail.com",
+      password: "Jasurbek2004",
     }),
   });
   let data = await res.json();
   selected.innerHTML += data?.name + ", ";
 }
+
+const login = () => {
+  fetch("http://localhost:8080/api/public/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email.value,
+      password: password.value,
+    }),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res?.authenticationToken) {
+        log.innerHTML = "Welcome uka!";
+      }
+    });
+};
