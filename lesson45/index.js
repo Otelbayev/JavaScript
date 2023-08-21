@@ -41,6 +41,14 @@ const getData = () => {
         let div = document.createElement("div");
         div.innerHTML = e.name;
         dataList.after(div);
+        let btn = document.createElement("button");
+        div.after(btn);
+        btn.innerHTML = "selected";
+        btn.onclick = () => {
+          fetch(`https://jsonplaceholder.typicode.com/users/${e.id}`)
+            .then((res) => res.json())
+            .then((res) => (selected.innerHTML += res?git .name));
+        };
       });
     });
 };
