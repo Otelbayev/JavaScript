@@ -47,7 +47,7 @@ const getData = () => {
         btn.onclick = () => {
           fetch(`https://jsonplaceholder.typicode.com/users/${e.id}`)
             .then((res) => res.json())
-            .then((res) => (selected.innerHTML += res?git .name));
+            .then((res) => (selected.innerHTML += res?.name));
         };
       });
     });
