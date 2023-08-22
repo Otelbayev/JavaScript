@@ -28,3 +28,19 @@
 //   .then((res) => console.log(res));
 
 //!Form Data
+
+formEvent.onsubmit = (e) => {
+  e.preventDefault();
+  let body = new FormData(formEvent);
+  //   let imgUrl = URL.createObjectURL(file.files[0]);
+  //   console.log(imgUrl);
+  body.append("userImg", file.files[0]);
+  body.append("roleIdSet", "1");
+  body.delete("password");
+  fetch("http://httpbin.org/post", {
+    method: "POST",
+    body,
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res));
+};
