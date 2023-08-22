@@ -22,3 +22,9 @@
 //       console.log(res);
 //     });
 // };
+
+// fetch("./txt.txt")
+//   .then((res) => res.text())
+//   .then((res) => console.log(res));
+
+//!Form Data
