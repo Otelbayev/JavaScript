@@ -7,17 +7,23 @@
   </head>
   <body>
     <h1 id="title">Fetch Advenced</h1>
-    <form name="formEvent">
-      <input id="email" name="email" type="email" placeholder="email" />
-      <input
-        id="password"
-        name="password"
-        type="password"
-        placeholder="password"
-      />
-      <input type="file" name="file" id="file" />
-      <input type="submit" value="login" />
-    </form>
+    <label for="login">Login</label>
+    <input
+      id="email"
+      type="text"
+      placeholder="login"
+      value="jasurdev1604@gmail.com"
+      name="login"
+    />
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      placeholder="password"
+      value="Jasurbek2004"
+      name="password"
+    />
+    <button onclick="login()">login</button>
     <script src="./index.js"></script>
   </body>
 </html>
