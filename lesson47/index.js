@@ -21,19 +21,26 @@
 //     .then((res) => console.log(res));
 // };
 
-fetch("./txt.txt")
-  .then((res) => res.text())
-  .then((res) => console.log(res));
+// fetch("./txt.txt")
+//   .then((res) => res.text())
+//   .then((res) => console.log(res));
+
+// formEvent.onsubmit = (e) => {
+//   e.preventDefault();
+//   fetch("http://localhost:8080/api/public/auth/login", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: new FormData(formEvent),
+//   })
+//     .then((res) => res.json())
+//     .then((res) => console.log(res));
+// };
 
 formEvent.onsubmit = (e) => {
   e.preventDefault();
   fetch("http://localhost:8080/api/public/auth/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: new FormData(formEvent),
-  })
-    .then((res) => res.json())
-    .then((res) => console.log(res));
+    headers: {},
+  });
 };
