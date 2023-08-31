@@ -45,7 +45,7 @@ formEvent.onsubmit = (e) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email: email.value, password: password.value }),
+    body: new FormData(formEvent),
   })
     .then((res) => res.json())
     .then((res) => console.log(res));
