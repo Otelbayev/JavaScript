@@ -83,3 +83,9 @@ const getSingle = () => {
     .then((res) => res.json())
     .then((res) => console.log(res));
 };
+
+const getHouse = () => {
+  fetch("http://localhost:8080/api/v1/houses/list")
+    .then((res) => res.json())
+    .then((res) => console.log(res));
+};
