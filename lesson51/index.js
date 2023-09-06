@@ -3,3 +3,23 @@
 // 	— Malumotlarni SessionStorage'dan olish / unga qo'shish
 // 	—  Malumotlar o'chirish va clear qilish
 // 	—  SessionStorage'ni loop qilish
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .then((res) => sessionStorage.setItem("data", JSON.stringify(res)));
+
+const getData = () => {
+  JSON.parse(sessionStorage.getItem("data")).forEach((element) => {
+    let a = document.createElement("h3");
+    a.innerHTML = `${element.id} - ${element.name} <button onclick="del(${element.id})">delete</button>`;
+    div.append(a);
+  });
+};
+
+getData();
+const del = (e) => {
+  data = JSON.parse(sessionStorage.getItem("data"));
+  let res = data.filter((v) => v.id !== e);
+  JSON.stringify(sessionStorage.setItem("data", res));
+  getData();
+};
