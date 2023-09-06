@@ -8,6 +8,16 @@
   </head>
   <body>
     <h1>Local Storage</h1>
+    <h1>
+      Count:
+      <span id="count">1</span>
+    </h1>
+    <h3 id="title"></h3>
+    <input type="text" oninput="onChange(event)" placeholder="title" />
+    <button onclick="plus()">plus</button>
+    <button onclick="minus()">minus</button>
+    <button onclick="deleteL()">delete</button>
+    <button onclick="clearing()">clear</button>
     <script src="./index.js"></script>
   </body>
 </html>
