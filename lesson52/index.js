@@ -12,9 +12,9 @@
 let date = new Date(2023, 7, 9);
 date = date.toUTCString();
 console.log(date);
-document.cookie = `name=jasurbek; expire=${date};`;
+document.cookie = `name=jasurbek; expire=${date};samesite=strict`;
 
-document.cookie = "title = none;max-age=1;secure";
+document.cookie = "title = none;max-age=1;secure;samesite=lax";
 //! secure -> qabul qininaytgan maumot boshqa saytdan qabul qilinmaydi
 //! sameside=lax; -> faqat cookiesdagi malumotni korish munkin uni GET,PUT, DELETE, qilish ni imkoni yoq
 //! sameside=strict; -> boshqa side dan malumot olib kelishiini oldini oladi
