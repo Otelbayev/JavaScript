@@ -39,3 +39,38 @@ request.onupgradeneeded = () => {
     };
   }
 };
+
+let id = 1;
+created.onclick = () => {
+  let user = {
+    id: id++,
+    name: n.value,
+    surname: surname.value,
+    grade: age.value,
+  };
+  let transaction = db.transaction("frontend", "readwrite");
+  let users = transaction.objectStore("frontend");
+
+  let event = users.add(user);
+  event.onsuccess = () => {
+    console.log("succes");
+    n.value = "";
+    surname.value = "";
+    age.value = "";
+  };
+  //   users.delete();
+  //   users.put();
+  //   users.get();
+  let res = users.getAll();
+
+  res.onsuccess = () => {
+    console.log(res);
+    res.result.forEach((e) => {
+      let div = document.createElement("div");
+      div.innerHTML = `<h1>${e.id} - ${e.name} - ${e.surname} <button onclick="del(${e.id})">del</button></h1> `;
+      qq.append(div);
+    });
+  };
+};
+
+function del(id) {}
