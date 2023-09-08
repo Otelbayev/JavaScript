@@ -7,7 +7,7 @@
 // 	—  bound orqali filter qilish.
 // 	—  "A", "Z" va "a", "z" bo'yicha filterlash.
 
-let request = window.indexedDB.open("base", 1);
+let request = window.indexedDB.open("base", 2);
 
 var db = null;
 
@@ -15,8 +15,27 @@ function drawData() {
   none.innerHTML = null;
   let transaction = db.transaction("frontend", "readonly");
   let users = transaction.objectStore("frontend");
+
+  let range = IDBKeyRange.lowerBound(10, false);
+
+  let strRange = IDBKeyRange.bound("A", "B");
+
   let data = users.getAll();
+
+  let ix = users.index("indexName").getAll(strRange);
+
+  let g = users.index("indexGrade").getAll(range);
+
+  ix.onsuccess = () => {
+    console.log(ix.result);
+  };
+
+  g.onsuccess = () => {
+    console.log(g.result);
+  };
+
   data.onsuccess = () => {
+    console.log(data.result);
     data.result.forEach((e) => {
       let a = document.createElement("div");
       a.innerHTML = `<h1>${e.id} - ${e.name} <button onclick="del(${e.id})">del</button></h1>`;
@@ -37,8 +56,19 @@ request.onerror = () => {
 
 request.onupgradeneeded = () => {
   db = request.result;
+  //   db.deleteObjectStore("frontend");
   if (!db.objectStoreNames.contains("frontend")) {
     let store = db.createObjectStore("frontend", { keyPath: "id" });
+    let indexName = store.createIndex("indexName", "name", { unique: false });
+    let indexGrade = store.createIndex("indexGrade", "grade", {
+      unique: false,
+    });
+    indexName.onsuccess = () => {
+      console.log("succrs indexedName");
+    };
+    indexGrade.onsuccess = () => {
+      console.log("indexGrade");
+    };
   }
 };
 
@@ -49,7 +79,7 @@ create.onclick = (e) => {
     id: ++id,
     name: n.value,
     surname: surname.value,
-    grade: age.value,
+    grade: Number(age.value),
   };
 
   let tr = db.transaction("frontend", "readwrite");
@@ -79,7 +109,7 @@ update.onclick = () => {
     id: 1,
     name: n.value,
     surname: surname.value,
-    grade: age.value,
+    grade: Number(age.value),
   };
   let users = tr.objectStore("frontend");
   let up = users.put(user);
