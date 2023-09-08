@@ -75,7 +75,7 @@
 
 // function del(id) {}
 
-let request = window.indexedDB.open("jasurbek", 6);
+let request = window.indexedDB.open("jasurbek", 7);
 
 var db = null;
 
@@ -83,11 +83,27 @@ request.onsuccess = (e) => {
   console.log("succesfully created!");
   db = e.target.result;
   db = request.result;
+  drawData();
 };
 
 request.onerror = () => {
   console.log("error on created!");
 };
+
+function drawData() {
+  qq.innerHTML = null;
+  let tr = db.transaction("frontend", "readonly");
+  let users = tr.objectStore("frontend");
+  let data = users.getAll();
+
+  data.onsuccess = () => {
+    data.result.forEach((e) => {
+      let div = document.createElement("div");
+      div.innerHTML = `<h1>${e.id} - ${e.name} <button onclick="del(${e.id})">delete</button></h1>`;
+      qq.append(div);
+    });
+  };
+}
 
 request.onupgradeneeded = (e) => {
   console.log("onupgradeneeded");
@@ -101,4 +117,54 @@ request.onupgradeneeded = (e) => {
       console.log("store error!");
     };
   }
+};
+
+let id = 0;
+
+created.onclick = (e) => {
+  let user = {
+    id: ++id,
+    name: n.value,
+    surname: surname.value,
+    grade: age.value,
+  };
+
+  let transaction = db.transaction("frontend", "readwrite");
+  let users = transaction.objectStore("frontend");
+
+  let event = users.add(user);
+  event.onsuccess = () => {
+    n.value = "";
+    surname.value = "";
+    age.value = "";
+  };
+
+  drawData();
+};
+
+function del(id) {
+  let transaction = db.transaction("frontend", "readwrite");
+  let users = transaction.objectStore("frontend");
+  let dl = users.delete(id);
+  dl.onsuccess = () => {
+    drawData();
+  };
+}
+
+update.onclick = () => {
+  let tr = db.transaction("frontend", "readwrite");
+  let user = {
+    id: 1,
+    name: n.value,
+    surname: surname.value,
+    grade: age.value,
+  };
+  let users = tr.objectStore("frontend");
+  let put = users.put(user);
+  put.onsuccess = () => {
+    drawData();
+    n.value = "";
+    surname.value = "";
+    age.value = "";
+  };
 };
